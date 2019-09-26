@@ -5,7 +5,7 @@ import Page404 from './App/Page404';
 import Home from './App/Home';
 
 ReactDOM.render(
-<HashRouter basename="/AmIACat">
+<HashRouter basename="/">
 	<Switch>
 		<Route exact path="/" component={() => <Redirect to="/home" />} />
 		<Route path="/home" component={Home} />
