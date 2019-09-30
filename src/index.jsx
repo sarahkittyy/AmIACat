@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Switch, Route, HashRouter, Redirect } from 'react-router-dom';
 import Page404 from './App/Page404';
 import Home from './App/Home';
+import './Global.css'
 
 ReactDOM.render(
 <HashRouter basename="/">

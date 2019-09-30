@@ -16,5 +16,6 @@ export default class Page404 extends Component
 	render()
 	{
 		return <h1 className={style.header}>404 -- page not found ;-;</h1>;
+		
 	}
 };
