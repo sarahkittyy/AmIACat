@@ -20,6 +20,10 @@ export default class Question extends Component
 	
 	textGiven(e)
 	{
+		if(e.target.value.endsWith('\n'))
+		{
+			this.next();
+		}
 		this.setState({
 			inputText: this.state.inputText + this.intendedText[this.state.inputText.length % this.intendedText.length]
 		});
@@ -58,12 +62,13 @@ export default class Question extends Component
 					</UI.Grid>
 					<UI.Grid item xl={10}>
 						<UI.TextField
-							id="standard-multiline-flexible" 
+							id="standard-multiline-flexible"
 							onChange={(e) => this.textGiven(e)}
 							multiline
+							autoFocus
 							value={this.state.inputText}
 							onSubmit={() => this.nextQuestion()}
-							label="Enter your response here...">
+							label="Enter your response...">
 							
 						</UI.TextField>
 					</UI.Grid>
