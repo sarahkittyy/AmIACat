@@ -22,7 +22,16 @@ export default class Question extends Component
 	{
 		if(e.target.value.endsWith('\n'))
 		{
-			this.next();
+			if(this.props.number == this.props.max)
+			{
+				this.setState({
+					finished: true
+				});
+			}
+			else
+			{
+				this.next();
+			}
 		}
 		this.setState({
 			inputText: this.state.inputText + this.intendedText[this.state.inputText.length % this.intendedText.length]
