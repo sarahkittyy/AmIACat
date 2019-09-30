@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import style from './Home.css';
 import * as UI from '@material-ui/core';
+import Question from './Components/Question';
+import QuestionDrawer from './Components/QuestionDrawer'
 
 export default class Home extends Component
 {
@@ -32,6 +33,18 @@ export default class Home extends Component
 						</UI.Grid>
 					</UI.Grid>
 				</UI.AppBar>
+				<UI.Grid container justify="center" align="center" direction="column" style={{height: '100%'}}>
+					<UI.Grid item style={{height: '100%'}}>
+						<QuestionDrawer on={0} questions={[
+							'What is your favorite thing to do?',
+							'Why are you taking this quiz?',
+							'What is your favorite type of pet?',
+							'Do you think meows are cute?',
+							'What is your favorite food?',
+							'What is your favorite color?'
+						]}/>
+					</UI.Grid>
+				</UI.Grid>
 			</>
 		);
 	}
